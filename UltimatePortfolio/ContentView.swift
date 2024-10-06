@@ -2,8 +2,6 @@
 //  ContentView.swift
 //  UltimatePortfolio
 //
-//  Created by Paul Hudson on 11/02/2023.
-//
 
 import SwiftUI
 
