@@ -15,7 +15,7 @@ struct ContentView: View {
             }
             .onDelete(perform: delete)
         }
-        .navigationTitle(LocalizedStringKey("Issues"))
+        .navigationTitle("Issues")
         .searchable(
             text: $dataController.filterText,
             tokens: $dataController.filterTokens,
