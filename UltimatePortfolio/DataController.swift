@@ -203,13 +203,13 @@ class DataController: ObservableObject {
     func newTag() {
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
-        tag.name = NSLocalizedString("New tag", comment: "Create a new tag")
+        tag.name = String(localized: "New tag")
         save()
     }
     
     func newIssue() {
         let issue = Issue(context: container.viewContext)
-        issue.title = NSLocalizedString("New issue", comment: "Create a new issue")
+        issue.title = String(localized: "New issue")
         issue.creationDate = .now
         issue.priority = 1
         
