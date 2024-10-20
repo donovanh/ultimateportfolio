@@ -28,7 +28,7 @@ struct SidebarView: View {
             Section("Smart Filters") {
                 ForEach(smartFilters) { filter in
                     NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
+                        Label(LocalizedStringKey(filter.name), systemImage: filter.icon)
                     }
                 }
             }
@@ -37,14 +37,23 @@ struct SidebarView: View {
                 ForEach(tagFilters) { filter in
                     NavigationLink(value: filter) {
                         Label(filter.name, systemImage: filter.icon)
-                            .badge(filter.tag?.tagActiveIssues.count ?? 0)
+                            .badge(filter.activeIssuesCount)
                             .contextMenu {
                                 Button {
                                     rename(filter)
                                 } label: {
                                     Label("Rename", systemImage: "pencil")
                                 }
+                                
+                                Button(role: .destructive) {
+                                    delete(filter)
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
                             }
+                            .accessibilityElement()
+                            .accessibilityLabel(filter.name)
+                            .accessibilityHint("\(filter.activeIssuesCount) issues")
                     }
                 }
                 .onDelete(perform: delete)
@@ -66,7 +75,7 @@ struct SidebarView: View {
                 dataController.deleteAll()
                 dataController.createSampleData()
             } label: {
-                Label("ADD SAMPLES", systemImage: "flame")
+                Label(LocalizedStringKey("ADD SAMPLES"), systemImage: "flame")
             }
             #endif
         }
@@ -76,6 +85,7 @@ struct SidebarView: View {
             TextField("New name", text: $tagName)
         }
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
+        .navigationTitle(LocalizedStringKey("Filters"))
     }
 
     func delete(_ offsets: IndexSet) {
@@ -83,6 +93,12 @@ struct SidebarView: View {
             let item = tags[offset]
             dataController.delete(item)
         }
+    }
+    
+    func delete(_ filter: Filter) {
+        guard let tag = filter.tag else { return }
+        dataController.delete(tag)
+        dataController.save()
     }
     
     func rename(_ filter: Filter) {

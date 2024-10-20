@@ -15,7 +15,7 @@ struct ContentView: View {
             }
             .onDelete(perform: delete)
         }
-        .navigationTitle("Issues")
+        .navigationTitle(LocalizedStringKey("Issues"))
         .searchable(
             text: $dataController.filterText,
             tokens: $dataController.filterTokens,
@@ -73,7 +73,7 @@ struct ContentView: View {
             }
             
             Button(action: dataController.newIssue) {
-                Label("New issue", systemImage: "square.and.pencil")
+                Label("New Issue", systemImage: "square.and.pencil")
             }
         }
     }
