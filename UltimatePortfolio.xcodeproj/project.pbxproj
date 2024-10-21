@@ -13,6 +13,12 @@
 		45D1C69F2CBDBB07004600E9 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1C69E2CBDBB07004600E9 /* AwardsView.swift */; };
 		45E55D8F2CC51F5D00AA2E08 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 45E55D8E2CC51F5D00AA2E08 /* Localizable.xcstrings */; };
 		45E55D922CC599E300AA2E08 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 45E55D912CC599E300AA2E08 /* Awards.json */; };
+		45E55D952CC6C8AF00AA2E08 /* SidebarViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E55D942CC6C8AF00AA2E08 /* SidebarViewToolbar.swift */; };
+		45E55D972CC6CAA400AA2E08 /* IssueViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E55D962CC6CAA400AA2E08 /* IssueViewToolbar.swift */; };
+		45E55D992CC6CB3600AA2E08 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E55D982CC6CB3600AA2E08 /* ContentViewToolbar.swift */; };
+		45E55D9B2CC6CD1900AA2E08 /* TagsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E55D9A2CC6CD1900AA2E08 /* TagsMenuView.swift */; };
+		45E55D9D2CC6CDFB00AA2E08 /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E55D9C2CC6CDFB00AA2E08 /* SmartFilterRow.swift */; };
+		45E55D9F2CC6CE7D00AA2E08 /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E55D9E2CC6CE7D00AA2E08 /* UserFilterRow.swift */; };
 		5111D1CD2997A61E00BDEB2E /* UltimatePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5111D1CC2997A61E00BDEB2E /* UltimatePortfolioApp.swift */; };
 		5111D1CF2997A61E00BDEB2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5111D1CE2997A61E00BDEB2E /* ContentView.swift */; };
 		5111D1D12997A61F00BDEB2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5111D1D02997A61F00BDEB2E /* Assets.xcassets */; };
@@ -37,6 +43,12 @@
 		45E55D8E2CC51F5D00AA2E08 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		45E55D902CC599E300AA2E08 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/Awards.json; sourceTree = "<group>"; };
 		45E55D932CC599EB00AA2E08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
+		45E55D942CC6C8AF00AA2E08 /* SidebarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewToolbar.swift; sourceTree = "<group>"; };
+		45E55D962CC6CAA400AA2E08 /* IssueViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewToolbar.swift; sourceTree = "<group>"; };
+		45E55D982CC6CB3600AA2E08 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
+		45E55D9A2CC6CD1900AA2E08 /* TagsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsMenuView.swift; sourceTree = "<group>"; };
+		45E55D9C2CC6CDFB00AA2E08 /* SmartFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFilterRow.swift; sourceTree = "<group>"; };
+		45E55D9E2CC6CE7D00AA2E08 /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		5111D1C92997A61E00BDEB2E /* UltimatePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimatePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5111D1CC2997A61E00BDEB2E /* UltimatePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioApp.swift; sourceTree = "<group>"; };
 		5111D1CE2997A61E00BDEB2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,10 +103,16 @@
 				5140ACC829A8191300E1331E /* Filter.swift */,
 				5140ACC129A8106300E1331E /* DataController.swift */,
 				5140ACC429A8183000E1331E /* SidebarView.swift */,
+				45E55D9E2CC6CE7D00AA2E08 /* UserFilterRow.swift */,
+				45E55D9C2CC6CDFB00AA2E08 /* SmartFilterRow.swift */,
+				45E55D942CC6C8AF00AA2E08 /* SidebarViewToolbar.swift */,
 				5111D1CE2997A61E00BDEB2E /* ContentView.swift */,
+				45E55D982CC6CB3600AA2E08 /* ContentViewToolbar.swift */,
 				5140ACD829A83D1700E1331E /* IssueRow.swift */,
 				5140ACC629A8183700E1331E /* DetailView.swift */,
 				5140ACF829A90E6A00E1331E /* IssueView.swift */,
+				45E55D9A2CC6CD1900AA2E08 /* TagsMenuView.swift */,
+				45E55D962CC6CAA400AA2E08 /* IssueViewToolbar.swift */,
 				5140ACFA29A90E7000E1331E /* NoIssueView.swift */,
 				45D1C69C2CBDBA2A004600E9 /* Award.swift */,
 				45D1C69E2CBDBB07004600E9 /* AwardsView.swift */,
@@ -195,7 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5140ACC929A8191300E1331E /* Filter.swift in Sources */,
+				45E55D9B2CC6CD1900AA2E08 /* TagsMenuView.swift in Sources */,
 				45D1C69D2CBDBA2A004600E9 /* Award.swift in Sources */,
+				45E55D972CC6CAA400AA2E08 /* IssueViewToolbar.swift in Sources */,
+				45E55D9D2CC6CDFB00AA2E08 /* SmartFilterRow.swift in Sources */,
 				45D1C69F2CBDBB07004600E9 /* AwardsView.swift in Sources */,
 				5140ACD529A8269900E1331E /* Tag-CoreDataHelpers.swift in Sources */,
 				5140ACC029A80E4400E1331E /* Main.xcdatamodeld in Sources */,
@@ -203,9 +224,12 @@
 				45D1C6972CBDB74E004600E9 /* Bundle-Decodable.swift in Sources */,
 				5140ACC729A8183700E1331E /* DetailView.swift in Sources */,
 				5140ACC229A8106300E1331E /* DataController.swift in Sources */,
+				45E55D992CC6CB3600AA2E08 /* ContentViewToolbar.swift in Sources */,
 				5140ACC529A8183000E1331E /* SidebarView.swift in Sources */,
 				5111D1CF2997A61E00BDEB2E /* ContentView.swift in Sources */,
+				45E55D952CC6C8AF00AA2E08 /* SidebarViewToolbar.swift in Sources */,
 				5140ACF929A90E6A00E1331E /* IssueView.swift in Sources */,
+				45E55D9F2CC6CE7D00AA2E08 /* UserFilterRow.swift in Sources */,
 				5140ACFB29A90E7000E1331E /* NoIssueView.swift in Sources */,
 				5140ACD929A83D1700E1331E /* IssueRow.swift in Sources */,
 				5111D1CD2997A61E00BDEB2E /* UltimatePortfolioApp.swift in Sources */,
