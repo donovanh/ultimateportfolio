@@ -46,7 +46,7 @@ extension Issue {
             return "Open"
         }
     }
-    
+
     var issueFormattedCreationDate: String {
         issueCreationDate.formatted(date: .numeric, time: .omitted)
     }

@@ -10,11 +10,11 @@ struct SidebarView: View {
     let smartFilters: [Filter] = [.all, .recent]
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var tags: FetchedResults<Tag>
-    
+
     @State private var tagToRename: Tag?
     @State private var renamingTag = false
     @State private var tagName = ""
-    
+
     var tagFilters: [Filter] {
         tags.map { tag in
             Filter(id: tag.tagID, name: tag.tagName, icon: "tag", tag: tag)
@@ -49,19 +49,19 @@ struct SidebarView: View {
             dataController.delete(item)
         }
     }
-    
+
     func delete(_ filter: Filter) {
         guard let tag = filter.tag else { return }
         dataController.delete(tag)
         dataController.save()
     }
-    
+
     func rename(_ filter: Filter) {
         tagToRename = filter.tag
         tagName = filter.name
         renamingTag = true
     }
-    
+
     func completeRename() {
         tagToRename?.name = tagName
         dataController.save()
