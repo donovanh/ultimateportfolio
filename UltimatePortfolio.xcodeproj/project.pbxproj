@@ -57,7 +57,7 @@
 		5111D1D42997A61F00BDEB2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5140ACBF29A80E4400E1331E /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		5140ACC129A8106300E1331E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		5140ACC329A8158100E1331E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5140ACC329A8158100E1331E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5140ACC429A8183000E1331E /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		5140ACC629A8183700E1331E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		5140ACC829A8191300E1331E /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
@@ -79,6 +79,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45CD5E5D2CCC12D300A5EE9E /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				5140ACC829A8191300E1331E /* Filter.swift */,
+				5140ACC429A8183000E1331E /* SidebarView.swift */,
+				45E55D942CC6C8AF00AA2E08 /* SidebarViewToolbar.swift */,
+				45E55D9C2CC6CDFB00AA2E08 /* SmartFilterRow.swift */,
+				45E55D9E2CC6CE7D00AA2E08 /* UserFilterRow.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		45CD5E5E2CCC12D900A5EE9E /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				5111D1CE2997A61E00BDEB2E /* ContentView.swift */,
+				45E55D982CC6CB3600AA2E08 /* ContentViewToolbar.swift */,
+				5140ACD829A83D1700E1331E /* IssueRow.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		45CD5E5F2CCC12DF00A5EE9E /* Editing */ = {
+			isa = PBXGroup;
+			children = (
+				5140ACC629A8183700E1331E /* DetailView.swift */,
+				5140ACF829A90E6A00E1331E /* IssueView.swift */,
+				45E55D962CC6CAA400AA2E08 /* IssueViewToolbar.swift */,
+				5140ACFA29A90E7000E1331E /* NoIssueView.swift */,
+				45E55D9A2CC6CD1900AA2E08 /* TagsMenuView.swift */,
+			);
+			path = Editing;
+			sourceTree = "<group>";
+		};
+		45CD5E602CCC12EA00A5EE9E /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				45D1C69C2CBDBA2A004600E9 /* Award.swift */,
+				45D1C69E2CBDBB07004600E9 /* AwardsView.swift */,
+				45E55D912CC599E300AA2E08 /* Awards.json */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		45CD5E612CCC13F300A5EE9E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				45D1C6962CBDB74E004600E9 /* Bundle-Decodable.swift */,
+				5140ACD229A8259300E1331E /* Issue-CoreDataHelpers.swift */,
+				5140ACD429A8269900E1331E /* Tag-CoreDataHelpers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		45CD5E622CCC141400A5EE9E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				45E55D8E2CC51F5D00AA2E08 /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		45CD5E632CCC142500A5EE9E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		45CD5E642CCC146500A5EE9E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				5111D1D22997A61F00BDEB2E /* UltimatePortfolio.entitlements */,
+				5140ACC329A8158100E1331E /* Info.plist */,
+				5140ACBE29A80E4400E1331E /* Main.xcdatamodeld */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		5111D1C02997A61E00BDEB2E = {
 			isa = PBXGroup;
 			children = (
@@ -98,33 +177,18 @@
 		5111D1CB2997A61E00BDEB2E /* UltimatePortfolio */ = {
 			isa = PBXGroup;
 			children = (
-				5140ACC329A8158100E1331E /* Info.plist */,
+				45CD5E5D2CCC12D300A5EE9E /* Filters */,
+				45CD5E5E2CCC12D900A5EE9E /* Issues */,
+				45CD5E5F2CCC12DF00A5EE9E /* Editing */,
+				45CD5E602CCC12EA00A5EE9E /* Awards */,
+				45CD5E632CCC142500A5EE9E /* Controllers */,
+				45CD5E612CCC13F300A5EE9E /* Extensions */,
+				45CD5E622CCC141400A5EE9E /* Localization */,
+				45CD5E642CCC146500A5EE9E /* Configuration */,
 				5111D1CC2997A61E00BDEB2E /* UltimatePortfolioApp.swift */,
-				5140ACC829A8191300E1331E /* Filter.swift */,
 				5140ACC129A8106300E1331E /* DataController.swift */,
-				5140ACC429A8183000E1331E /* SidebarView.swift */,
-				45E55D9E2CC6CE7D00AA2E08 /* UserFilterRow.swift */,
-				45E55D9C2CC6CDFB00AA2E08 /* SmartFilterRow.swift */,
-				45E55D942CC6C8AF00AA2E08 /* SidebarViewToolbar.swift */,
-				5111D1CE2997A61E00BDEB2E /* ContentView.swift */,
-				45E55D982CC6CB3600AA2E08 /* ContentViewToolbar.swift */,
-				5140ACD829A83D1700E1331E /* IssueRow.swift */,
-				5140ACC629A8183700E1331E /* DetailView.swift */,
-				5140ACF829A90E6A00E1331E /* IssueView.swift */,
-				45E55D9A2CC6CD1900AA2E08 /* TagsMenuView.swift */,
-				45E55D962CC6CAA400AA2E08 /* IssueViewToolbar.swift */,
-				5140ACFA29A90E7000E1331E /* NoIssueView.swift */,
-				45D1C69C2CBDBA2A004600E9 /* Award.swift */,
-				45D1C69E2CBDBB07004600E9 /* AwardsView.swift */,
-				5140ACD229A8259300E1331E /* Issue-CoreDataHelpers.swift */,
-				5140ACD429A8269900E1331E /* Tag-CoreDataHelpers.swift */,
-				45D1C6962CBDB74E004600E9 /* Bundle-Decodable.swift */,
-				45E55D8E2CC51F5D00AA2E08 /* Localizable.xcstrings */,
-				45E55D912CC599E300AA2E08 /* Awards.json */,
 				45D1C6992CBDB970004600E9 /* Colors.xcassets */,
-				5140ACBE29A80E4400E1331E /* Main.xcdatamodeld */,
 				5111D1D02997A61F00BDEB2E /* Assets.xcassets */,
-				5111D1D22997A61F00BDEB2E /* UltimatePortfolio.entitlements */,
 				5111D1D32997A61F00BDEB2E /* Preview Content */,
 			);
 			path = UltimatePortfolio;
@@ -148,6 +212,7 @@
 				5111D1C52997A61E00BDEB2E /* Sources */,
 				5111D1C62997A61E00BDEB2E /* Frameworks */,
 				5111D1C72997A61E00BDEB2E /* Resources */,
+				45E55DA02CC98D3500AA2E08 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -206,6 +271,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45E55DA02CC98D3500AA2E08 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5111D1C52997A61E00BDEB2E /* Sources */ = {
@@ -371,7 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/UltimatePortfolio.entitlements;
+				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/Configuration/UltimatePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -379,8 +466,9 @@
 				DEVELOPMENT_TEAM = HTBK33F6WA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UltimatePortfolio/Info.plist;
+				INFOPLIST_FILE = UltimatePortfolio/Configuration/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -411,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/UltimatePortfolio.entitlements;
+				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/Configuration/UltimatePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -419,8 +507,9 @@
 				DEVELOPMENT_TEAM = HTBK33F6WA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UltimatePortfolio/Info.plist;
+				INFOPLIST_FILE = UltimatePortfolio/Configuration/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
